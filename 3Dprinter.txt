@@ -1,0 +1,26 @@
+from __future__ import absolute_import, division, print_function, unicode_literals
+from octoprint.printer.standard import Printer
+import octoprint
+from octoprint.util import comm as comm
+from octoprint.printer import (
+    InvalidFileLocation,
+    InvalidFileType,
+    PrinterCallback,
+    PrinterInterface,
+    UnknownScript,
+)
+from octoprint.printer.estimation import PrintTimeEstimator
+from octoprint.settings import settings
+from octoprint.util import InvariantContainer
+from octoprint.util import comm as comm
+from octoprint.util import get_fully_qualified_classname as fqcn
+from octoprint.util import monotonic_time, to_unicode
+
+data=10
+
+#sendJogCommand('x',1)
+
+
+t1=Printer(PrinterInterface, comm.MachineComPrintCallback)
+
+t1.jog('x',1)
